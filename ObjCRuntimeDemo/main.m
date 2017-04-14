@@ -12,35 +12,49 @@
 #import "TestClass+SwapMethod.h"
 
 #import "TestClass+AssociatedObject.h"
+#import "MClass.h"
 
 #import "RuntimeKit.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSString *className = [RuntimeKit fetchClassName:[TestClass class]];
-        NSLog(@"测试类的类名为：%@\n", className);
+        MClass *m = [MClass new];
+        [m ex_registerClassPair];
         
-        NSArray *ivarList = [RuntimeKit fetchIvarList:[TestClass class]];
-        NSLog(@"\n获取TestClass的成员变量列表:%@", ivarList);
+//        NSString *className = [RuntimeKit fetchClassName:[TestClass class]];
+//        NSLog(@"测试类的类名为：%@\n", className);
+//        
+//        NSArray *ivarList = [RuntimeKit fetchIvarList:[TestClass class]];
+//        NSLog(@"\n获取TestClass的成员变量列表:%@", ivarList);
+//        
+//        NSArray *propertyList = [RuntimeKit fetchPropertyList:[TestClass class]];
+//        NSLog(@"\n获取TestClass的属性列表:%@", propertyList);
+//        
+//        NSArray *methodList = [RuntimeKit fetchMethodList:[TestClass class]];
+//        NSLog(@"\n获取TestClass的方法列表：%@", methodList);
+//        
+//        NSArray *protocolList = [RuntimeKit fetchProtocolList:[TestClass class]];
+//        NSLog(@"\n获取TestClass的协议列表：%@", protocolList);
+//        TestClass *instance = [TestClass new];
+//        [instance publicTestMethod2];
+//        [instance performSelector:@selector(noThisMethod:) withObject:@"实例方法参数"];
         
-        NSArray *propertyList = [RuntimeKit fetchPropertyList:[TestClass class]];
-        NSLog(@"\n获取TestClass的属性列表:%@", propertyList);
-        
-        NSArray *methodList = [RuntimeKit fetchMethodList:[TestClass class]];
-        NSLog(@"\n获取TestClass的方法列表：%@", methodList);
-        
-        NSArray *protocolList = [RuntimeKit fetchProtocolList:[TestClass class]];
-        NSLog(@"\n获取TestClass的协议列表：%@", protocolList);
-        TestClass *instance = [TestClass new];
-        [instance publicTestMethod2];
-        [instance performSelector:@selector(noThisMethod:) withObject:@"实例方法参数"];
-        
-        instance.dynamicAddProperty = @"我是动态添加的属性";
-        NSLog(@"%@", instance.dynamicAddProperty);
+        [RuntimeKit addMethod:[TestClass class]
+                       method:@selector(noImplementFunc)
+                       method:@selector(method1)];
+        TestClass *a = [[TestClass alloc] init];
+        [a noImplementFunc];
         
         
-        [instance swapMethod];
-        [instance method1];
+//        instance.dynamicAddProperty = @"我是动态添加的属性";
+//        NSLog(@"%@", instance.dynamicAddProperty);
+        
+        
+//        [instance swapMethod];
+//        [instance method1];
+        
+//        NSLog(@".......");
+//        [instance noImplementFunc];
         
     }
     return 0;

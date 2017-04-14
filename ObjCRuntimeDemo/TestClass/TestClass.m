@@ -26,6 +26,7 @@
     BOOL _var3;
     double _var4;
     float _var5;
+    NSMutableArray *privateProperty1;
 }
 @property (nonatomic, strong) NSMutableArray *privateProperty1;
 @property (nonatomic, strong) NSNumber *privateProperty2;
@@ -71,8 +72,8 @@
  @return 找到其他的执行方法，并返回yes
  */
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    return NO;    //当返回NO时，会接着执行forwordingTargetForSelector:方法，
-    [RuntimeKit addMethod:[self class] method:sel method:@selector(dynamicAddMethod:)];
+//    return NO;    //当返回NO时，会接着执行forwordingTargetForSelector:方法，
+//    [RuntimeKit addMethod:[self class] method:sel method:@selector(dynamicAddMethod:)];
     return YES;
 }
 
@@ -106,6 +107,10 @@
     } else {
         [self doesNotRecognizeSelector:sel];
     }
+}
+
+- (void)noThisMethod {
+    NSLog(@"...");
 }
 
 @end

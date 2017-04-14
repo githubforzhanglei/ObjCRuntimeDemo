@@ -16,5 +16,9 @@
 - (void)publicTestMethod1: (NSString *)value1 Second: (NSString *)value2;
 - (void)publicTestMethod2;
 
+//- (void)noThisMethod;
 - (void)method1;
+
+- (void)noImplementFunc;
+
 @end

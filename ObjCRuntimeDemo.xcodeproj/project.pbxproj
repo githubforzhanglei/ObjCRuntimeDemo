@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4882EA131EA0AAE300E83DBF /* MClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882EA121EA0AAE300E83DBF /* MClass.m */; };
 		F482C91E1E1CEB66009021C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F482C91D1E1CEB66009021C7 /* main.m */; };
 		F4ED27961E1CF1CE006126CA /* TestClass+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ED27921E1CF1CE006126CA /* TestClass+Category.m */; };
 		F4ED27971E1CF1CE006126CA /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ED27941E1CF1CE006126CA /* TestClass.m */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4882EA111EA0AAE300E83DBF /* MClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MClass.h; sourceTree = "<group>"; };
+		4882EA121EA0AAE300E83DBF /* MClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MClass.m; sourceTree = "<group>"; };
 		F482C91A1E1CEB66009021C7 /* ObjCRuntimeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCRuntimeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		F482C91D1E1CEB66009021C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4ED27911E1CF1CE006126CA /* TestClass+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestClass+Category.h"; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				F4ED27A11E1E2CA4006126CA /* TestClass+SwapMethod.m */,
 				F4ED27A31E1E2D09006126CA /* TestClass+AssociatedObject.h */,
 				F4ED27A41E1E2D09006126CA /* TestClass+AssociatedObject.m */,
+				4882EA111EA0AAE300E83DBF /* MClass.h */,
+				4882EA121EA0AAE300E83DBF /* MClass.m */,
 			);
 			path = TestClass;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			files = (
 				F4ED27971E1CF1CE006126CA /* TestClass.m in Sources */,
 				F4ED27A51E1E2D09006126CA /* TestClass+AssociatedObject.m in Sources */,
+				4882EA131EA0AAE300E83DBF /* MClass.m in Sources */,
 				F4ED27961E1CF1CE006126CA /* TestClass+Category.m in Sources */,
 				F482C91E1E1CEB66009021C7 /* main.m in Sources */,
 				F4ED279A1E1CF54F006126CA /* RuntimeKit.m in Sources */,
